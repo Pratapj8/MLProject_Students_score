@@ -1,5 +1,12 @@
 numpy
 pandas
 
+# Use when reading the data from my-sql
+# run - pip install -r requirements.txt
+python-dotenv # python-dotenv is used to load environment variables from a .env file into the application.
+mysql-connector-python # mysql-connector-python is the official MySQL driver developed by MySQL to connect Python applications to MySQL databases.
+pymysql # pymysql is a pure Python MySQL client library, often used as a drop-in replacement for MySQLdb.
+
+scikit-learn
 
 #-e .

@@ -11,8 +11,10 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
+# Project name 
 project_name = "Students_Score_Project"
 
+# List of files to be created
 list_of_files = [
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/components/__init__.py",
