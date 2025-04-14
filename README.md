@@ -1,1 +1,1 @@
-## End to End Students score Project
+## End-to-End Data Science Student Score Project
