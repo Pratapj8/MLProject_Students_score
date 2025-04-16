@@ -1,1 +1,6 @@
+# The artifacts/ folder is usually manually created by your own code 
+# Processed data  ,Temporary files , Trained models ,Logs or reports ,
+# Outputs from ETL (Extract, Transform, Load) steps
+
+
 /raw.csv

@@ -1,4 +1,5 @@
 # Setup.py is a script for packaging Python projects.
+# Setting / command code 
 # It contains information about the project, such as its name, version, author, and dependencies.
 
 from setuptools import setup, find_packages

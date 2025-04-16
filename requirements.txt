@@ -1,3 +1,8 @@
+# Reuirements.txt is a file that lists the packages required to run a Python project.
+# It is used to install the required packages using pip.
+# The file should be in the same directory as the Python script or notebook.
+# The packages listed in the file will be installed in the current Python environment.
+
 numpy
 pandas
 
@@ -8,5 +13,9 @@ mysql-connector-python # mysql-connector-python is the official MySQL driver dev
 pymysql # pymysql is a pure Python MySQL client library, often used as a drop-in replacement for MySQLdb.
 
 scikit-learn
+seaborn
+
+catboost
+xgboost
 
 #-e .

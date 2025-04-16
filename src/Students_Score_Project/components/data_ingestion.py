@@ -5,17 +5,18 @@
 
 import os
 import sys
-from src.Students_Score_Project.exception import CustomException
-from src.Students_Score_Project.logger import logging
+from src.Students_Score_Project.exception import CustomException # Students_Score_Project
+from src.Students_Score_Project.logger import logging            # Students_Score_Project
 import pandas as pd
 
+# Students_Score_Project
 from src.Students_Score_Project.utils import read_sql_data # reading code from mysql
 
 from sklearn.model_selection import train_test_split
 
 from dataclasses import dataclass
 
-@dataclass
+@dataclass  # artifacts
 class DataIngestionConfig:
     train_data_path:str=os.path.join("artifacts", "train.csv")
     test_data_path:str=os.path.join("artifacts", "test.csv")
@@ -27,7 +28,11 @@ class DataIngestion:
         
     def initiate_data_ingestion(self):
         try:
-            df=read_sql_data() ##reading code from mysql (raw data)
+            #df=read_sql_data() ##reading code from mysql database(raw data,sql) # comment once you read the data
+            df=pd.read_csv(os.path.join("notebook/data", "raw.csv")) # reading the data from artifacts folder
+            
+            
+            
             logging.info("Reading completed mysql database")
             
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True) # creating artifacts folder

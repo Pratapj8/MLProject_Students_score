@@ -1,4 +1,4 @@
-# utils.py is used to get the data from the URL,Database,local folder and save it in the data folder(artifacts)
+# utils.py is used to get the data from the URL,Database,local folder and save it in the folder(artifacts)
 # 
 
 import os
@@ -7,10 +7,13 @@ from src.Students_Score_Project.exception import CustomException
 from src.Students_Score_Project.logger import logging
 import pandas as pd
 
-
+import pickle # to save the model
+import numpy as np # for numerical operations
 
 from dotenv import load_dotenv # to load environment variables from .env file
 import pymysql # to connect to MySQL database
+
+
 
 
 load_dotenv() # Read environment variables from .env file
@@ -42,5 +45,20 @@ def read_sql_data():
         
         
     except Exception as ex:
-        raise CustomeException(ex, sys)
+        raise CustomException(ex, sys)
+    
+# Saving the pickle file 
+def save_object(file_path, obj):
+    """
+    This function saves the object as a pickle file
+    """
+    try:
+        dir_path = os.path.dirname(file_path)
+        os.makedirs(dir_path, exist_ok=True)
+        with open(file_path, 'wb') as file_obj:
+            pickle.dump(obj, file_obj)
+            
+            
+    except Exception as e:
+        raise CustomException(e, sys)
 

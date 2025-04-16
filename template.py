@@ -1,5 +1,6 @@
-# Creating multiple files and directories
+# Creating multiple files or folder
 # This script creates a directory structure and empty files for a Python project.
+
 '''
 template.py is a starter file that contains common code structure like imports, 
 functions, and main() setup — so you don’t have to rewrite it every time you start a new script.
