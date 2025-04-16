@@ -5,6 +5,8 @@
 
 numpy
 pandas
+matplotlib
+
 
 # Use when reading the data from my-sql
 # run - pip install -r requirements.txt
@@ -15,7 +17,11 @@ pymysql # pymysql is a pure Python MySQL client library, often used as a drop-in
 scikit-learn
 seaborn
 
+
 catboost
 xgboost
+Flask
+dill
+mlflow ==2.2.2
 
 #-e .
